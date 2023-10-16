@@ -1,0 +1,64 @@
+---
+import Recetascard from "./recetascard.astro"
+
+const recetas = 
+[
+{
+    nombre: "Pizza Casera",
+    imagen: "https://cdn0.recetasgratis.net/es/posts/1/9/3/pizza_casera_31391_300_square.webp"
+},
+{
+    nombre: "Flan Mixto",
+    imagen: "https://cdn0.recetasgratis.net/es/posts/0/1/9/flan_mixto_76910_300_square.webp"
+},
+{
+    nombre: "Galletas de Mantequilla",
+    imagen: "https://cdn0.recetasgratis.net/es/posts/3/5/5/galletas_de_mantequilla_caseras_31553_300_square.webp"
+},
+{
+    nombre: "Ravioles de Verdura",
+    imagen: "https://cdn0.recetasgratis.net/es/posts/4/2/9/ravioles_de_verdura_76924_300_square.webp"
+},
+{
+    nombre: "Chupe de Quinoa",
+    imagen: "https://cdn0.recetasgratis.net/es/posts/5/2/9/chupe_de_quinua_76925_300_square.webp"
+},
+{
+    nombre: "Pastel de Choclo",
+    imagen: "https://cdn0.recetasgratis.net/es/posts/1/3/9/pastel_de_choclo_dulce_76931_300_square.webp"
+},
+{
+    nombre: "Panqueques",
+    imagen: "https://cdn0.recetasgratis.net/es/posts/0/7/4/panqueques_super_faciles_de_hacer_51470_300_square.webp"
+},
+{
+    nombre: "Milanesa de Berenjena",
+    imagen: "https://cdn0.recetasgratis.net/es/posts/8/1/9/milanesa_de_berenjena_vegana_76918_300_square.webp"
+},
+{
+    nombre: "Tostadas Francesas",
+    imagen: "https://cdn0.recetasgratis.net/es/posts/5/1/9/tostadas_francesas_o_french_toast_76915_300_square.webp"
+},
+{
+    nombre: "Galletas de Avena",
+    imagen: "https://cdn0.recetasgratis.net/es/posts/3/0/3/galletas_de_avena_faciles_y_rapidas_67303_300_square.webp"
+}
+
+
+
+]
+---
+
+<ul class=" grid grid-cols-2 gap-4 mt-10 text-sm  md:grid-cols-4 lg:grid-cols-5 md:px-5">
+
+    {
+        recetas.map(({nombre, imagen})=>{
+            return( 
+                <Recetascard nombre={nombre} imagen={imagen} />
+            )
+        }
+        )
+
+    }
+
+</ul>
